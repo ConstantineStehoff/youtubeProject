@@ -1,0 +1,14 @@
+{
+  "name": "youtubeProject",
+  "version": "0.1.0",
+  "description": "Front-end dependencies for the project.",
+  "authors": [
+    "Konstantin Stekhov"
+  ],
+  "dependencies": {
+    "jquery": "~1.9.1",
+    "angular": "~1.4.0",
+    "bootstrap-less" : "~3.2.0"
+  },
+  "license": "MIT"
+}

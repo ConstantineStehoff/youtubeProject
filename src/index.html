@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="English" data-ng-app="utubeApp">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Youtube App</title>
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container" data-ng-controller="Video as video">
+
+			<div class="row">
+				<div class="col-md-12">
+
+					<utube height="{{video.height}}" width="{{video.width}}" video-id="{{video.videoId}}" rotated="{{video.rotated}}"></utube>
+    				
+				</div>
+			</div>
+			<div class="ut-dashboard">
+				<form class="form-horizontal">
+					<div class="ut-dashboard__header">
+						<span class="ut-dashbaord__headerTitle">Video Dashboard</span>
+					</div>
+					<div class="ut-dashboard__body">
+						<div class="form-group">
+						    <label class="col-sm-5 control-label" for="width">Width</label>
+						    <input type="text" class="col-sm-7 form-control ut-dashboard__input" id="width" ng-model="video.width" aria-required="true" aria-label="Width">
+						</div>
+						<div class="form-group">
+						    <label class="col-sm-5 control-label" for="height">Height</label>
+						    <input type="text" class="col-sm-7 form-control ut-dashboard__input" id="height" ng-model="video.height" aria-required="true" aria-label="Height">
+						</div>
+						<div class="form-group">
+						    <label class="col-sm-5 control-label" for="videoId">Video ID</label>
+						    <input type="text" class="col-sm-7 form-control ut-dashboard__input" id="videoId" ng-model="video.videoId" aria-required="true" aria-label="Video ID">
+						</div>
+						<div class="form-group">
+						    <label class="col-sm-5 control-label" for="rotated">Rotate Degree</label>
+						    <input type="text" class="col-sm-7 form-control ut-dashboard__input" id="rotated" ng-model="video.rotated" aria-required="true" aria-label="Rotate Degree">
+						</div>
+					</div>	
+				</form>
+			</div>	
+						
+		</div>	
+		<!-- Javascript files -->
+		<script src="scripts/jquery.min.js"></script>
+		<script src="scripts/angular.js"></script>
+		<script src="scripts/youtubeProject.min.js"></script>
+	</body>
+</html>
